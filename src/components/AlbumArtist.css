@@ -1,5 +1,5 @@
 .album {
-  background-color: #535353;
+  background-color: #777777;
   margin-bottom: 16px;
   border: 1px solid #1B1A1C;
   border-radius: 8px;
@@ -23,6 +23,9 @@
 
 .album-link {
   margin-top: 8px;
+  color: white;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .album-info-item {
@@ -30,3 +33,14 @@
   color: white;
   margin-bottom: 4px;
 }
+
+.btn-link-album {
+  border: none;
+  border-radius: 6px;
+  width: 108px;
+  height: 26px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #1ED760;
+}
+

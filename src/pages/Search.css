@@ -43,9 +43,9 @@ form {
 }
 
 .input-search {
-  width: 230px;
+  width: 224px;
   height: 30px; 
-  padding: 4px 0 4px 28px;
+  padding: 4px 0 4px 32px;
   border: none;
   font-size: 16px;
   border-radius: 8px;

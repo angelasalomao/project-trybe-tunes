@@ -35,20 +35,32 @@ class AlbumArtist extends React.Component {
             </p>
           </div>
           <div className="album-info-item">
-            <p>Data: </p>
-            <p>{releaseDate}</p>
+            <p>
+              <b>Data:</b>
+              {' '}
+              {releaseDate}
+              </p>
           </div>
           <div className="album-info-item">
-            <p>Faixas:</p>
-            <p>{trackCount}</p>
+            <p>
+              <b>Faixas:</b>
+              {' '}
+              {trackCount}
+              </p>
           </div>
           <div className="album-info-item">
-            <p>Preço:</p>
-            <p>{collectionPrice}</p>
+            <p>
+              <b>Preço:</b>
+              {' '}
+              {collectionPrice}
+              </p>
           </div>
           <div className="album-info-item">
-            <p>Id do artista:</p>
-            <p>{artistId}</p>
+            <p>
+              <b>Id do artista:</b>
+              {' '}
+              {artistId}
+              </p>
           </div>
         </div>
         <div className="album-image-container">
@@ -58,7 +70,7 @@ class AlbumArtist extends React.Component {
             to={ `/album/${collectionId}` }
             className="album-link"
           >
-            Ver álbum
+            <button className="btn-link-album">Escutar álbum</button>
           </Link>
         </div>
         <LinksFooter />
