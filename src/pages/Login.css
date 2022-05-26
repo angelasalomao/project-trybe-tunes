@@ -54,7 +54,7 @@ body {
 .input-name {
   width: 300px;
   height: 50px;
-  margin-top: 60px;
+  margin-top: 68px;
   background-color: #121212;
   border: none;
   border-bottom: 1px solid white;
@@ -76,7 +76,7 @@ body {
   color: black;
   font-size: 18px;
   font-weight: 900;
-  margin-top: 12px;
+  margin-top: 20px;
   margin-bottom: 70px;
   cursor: pointer;
 }
