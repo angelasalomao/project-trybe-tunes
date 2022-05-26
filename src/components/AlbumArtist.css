@@ -1,0 +1,32 @@
+.album {
+  background-color: #535353;
+  margin-bottom: 16px;
+  border: 1px solid #1B1A1C;
+  border-radius: 8px;
+  display: flex;
+  padding: 16px;
+}
+
+.album-info {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.album-image-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.album-link {
+  margin-top: 8px;
+}
+
+.album-info-item {
+  display: flex;
+  color: white;
+  margin-bottom: 4px;
+}

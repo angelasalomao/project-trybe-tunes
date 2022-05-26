@@ -1,0 +1,23 @@
+.nav-links {
+  background-color: #121212;
+  color: white;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  padding: 16px 0;
+}
+
+.icon-home, .icon-fav, .icon-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home-icon, .fav-icon, .profile-icon {
+  width: 20px;
+  height: 20px;
+}
