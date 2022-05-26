@@ -3,7 +3,6 @@ import { Redirect } from 'react-router-dom';
 import Loading from './Loading';
 import { createUser } from '../services/userAPI';
 import logo from '../images/Group_11.png';
-import statusBar from '../images/dark.png';
 import './Login.css';
 
 class Login extends React.Component {
@@ -46,7 +45,6 @@ class Login extends React.Component {
 
      return (
        <>
-         <img src={ statusBar } alt="Status-Bar" className="status-bar" />
          <div>
            <img src="https://images.wallpaperscraft.com/image/single/headphones_bw_headset_120277_240x320.jpg" alt="logo-music" className="headphone" />
          </div>
