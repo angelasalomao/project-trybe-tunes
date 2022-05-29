@@ -1,8 +1,10 @@
 import React from 'react';
-import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import logo from '../images/Group_11.png'
+import './Favorites.css'
+import LinksFooter from '../components/LinksFooter';
 
 const favoriteTrue = true;
 
@@ -39,9 +41,12 @@ class Favorites extends React.Component {
   render() {
     const { favoritesList, loading } = this.state;
     return (
-      <div data-testid="page-favorites">
-        <Header />
+      <div data-testid="page-favorites" className="favorite-page">
+        <div className="div-logo">
+          <img src={ logo } alt="logo-trybe-tunes" className="logo-page-search" />
+        </div>
         <section>
+          <h1>Favorite Songs</h1>
           { favoritesList.length > 0 ? favoritesList.map((music) => (
             <MusicCard
               key={ music.trackId }
@@ -50,9 +55,10 @@ class Favorites extends React.Component {
               callback={ this.onUpdateFavorites }
             />
           ))
-            : (<h3>A lista está vazia.</h3>) }
+            : (<h3>The list is empty.</h3>) }
         </section>
         { loading && <Loading /> }
+        <LinksFooter />
       </div>
     );
   }
