@@ -1,0 +1,24 @@
+.music-cards-page {
+  padding: 6px 16px;
+  background-color: #777777;
+  margin: 16px;
+  border-radius: 8px;
+}
+
+.card-music {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  padding: 6px;
+}
+
+.audio-music {
+  width: 340px;
+  margin-right: 16px;
+}
+
+.favorite-button {
+  background:none;
+  border: none;
+}

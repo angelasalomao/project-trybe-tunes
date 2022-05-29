@@ -2,6 +2,8 @@ import React from 'react';
 import Proptypes from 'prop-types';
 import { addSong, removeSong } from '../services/favoriteSongsAPI';
 import Loading from '../pages/Loading';
+import {FaHeart} from 'react-icons/fa'
+import './MusicCard.css';
 
 class MusicCard extends React.Component {
   constructor() {
@@ -75,24 +77,23 @@ class MusicCard extends React.Component {
     const { music } = this.props;
     const { loading, checked } = this.state;
     return (
-      <div>
-        <p>{ music.trackName }</p>
-        <audio data-testid="audio-component" src={ music.previewUrl } controls>
+      <div className="music-cards-page">
+       <p>
+          <b>Name of the song:</b>
+          {' '}
+          { music.trackName }
+          </p>
+        <div className="card-music">
+        <audio data-testid="audio-component" src={ music.previewUrl } controls className="audio-music">
           <track kind="captions" />
           O seu navegador não suporta o elemento
           <code>audio</code>
           .
         </audio>
-        <label htmlFor="input-checkbox">
-          Favorita
-          <input
-            type="checkbox"
-            id="input-checkbox"
-            data-testid={ `checkbox-music-${music.trackId}` }
-            onChange={ this.onChange }
-            checked={ checked }
-          />
-        </label>
+        <button className="favorite-button" onClick={checked ? this.removeFavorite : this.addFavorite}>
+          <FaHeart size={20} color={checked ? '#1ED760' : '#ffffff'}/>
+        </button>
+        </div>
         {loading && <Loading />}
       </div>
     );
