@@ -1,4 +1,27 @@
-.info-album {
+.album-page {
+  max-width: 428px;
+  max-height: 926px;
+  padding: 16px 16px 6px 16px;
+}
+
+.div-logo {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-page-search {
+  width: 200px;
+  height: 150px;
+}
+
+p, p {
+  color: white;
+}
+
+.card-music-container {
+  padding-bottom: 64px;
+}
+
+.name-artist-title, .name-album-title {
+  font-size: 18px;
 }
