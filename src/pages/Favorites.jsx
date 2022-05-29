@@ -57,7 +57,9 @@ class Favorites extends React.Component {
           ))
             : (<h3>The list is empty.</h3>) }
         </section>
+        <div className="loading-container">
         { loading && <Loading /> }
+        </div>
         <LinksFooter />
       </div>
     );
