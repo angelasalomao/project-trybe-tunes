@@ -3,11 +3,6 @@
   max-height: 926px;
 }
 
-.status-bar {
-  width: 400px;
-  height: 40px;
-}
-
 .div-logo {
   display: flex;
   justify-content: center;
@@ -64,12 +59,6 @@ form {
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-}
-
-.footer-line {
-  display: flex;
-  justify-content: center;
-  margin-top: 570px;
 }
 
 .search-bar-container{
