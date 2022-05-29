@@ -6,7 +6,7 @@ import './ListAlbum.css';
 class ListAlbum extends React.Component {
   render() {
     const { nameArtist, data } = this.props;
-    const text = `Resultado de álbuns de: ${nameArtist}`;
+    const text = `Search results: ${nameArtist}`;
     return data.length === 0 ? <span>Nenhum álbum foi encontrado</span>
       : (
         <>

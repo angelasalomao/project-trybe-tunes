@@ -84,7 +84,7 @@ class Search extends React.Component {
                 disabled={ buttonDisabled }
                 className="btn-submit-search"
               >
-                Pesquisar
+                Search
               </button>
             </form>
           </div>
