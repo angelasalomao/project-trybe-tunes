@@ -2,7 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Loading from './Loading';
 import { getUser } from '../services/userAPI';
-import Header from '../components/Header';
+import logo from '../images/Group_11.png';
+import './Profile.css';
+import LinksFooter from '../components/LinksFooter';
+import {CgProfile} from 'react-icons/cg';
 
 class Profile extends React.Component {
   constructor() {
@@ -37,34 +40,34 @@ class Profile extends React.Component {
   }
 
   render() {
-    const { name, email, description, image, loading } = this.state;
+    const { name, email, description, loading } = this.state;
     return (
       <div data-testid="page-profile">
-        <Header />
-        <h1>Meu perfil</h1>
-        <img
-          data-testid="profile-image"
-          src={ image }
-          alt="Foto de perfil"
-        />
-        <div>
-          <h4>Nome: </h4>
-          <p>{ name }</p>
+       <div className="div-logo">
+          <img src={ logo } alt="logo-trybe-tunes" className="logo-page-search" />
         </div>
-        <div>
-          <h4>Email: </h4>
-          <p>{ email }</p>
+        <h1>My profile</h1>
+        <div className="profile-page">
+          <div className="foto-container">
+            <CgProfile size={70}/>
         </div>
-        <div>
-          <h4>Descrição: </h4>
-          <p>{ description }</p>
-        </div>
+        <p className="info-profile"><b>Name: </b>
+          { name }
+          </p>
+          <p className="info-profile"><b>Email: </b>
+            { email }
+          </p>
+          <p className="info-profile"><b>Description: </b>
+          { description }
+          </p>
         <Link to="/profile/edit">
-          <button type="button">
-            Editar perfil
+          <button type="button" className="btn-edit-profile">
+          Edit profile
           </button>
         </Link>
         { loading && <Loading /> }
+        <LinksFooter />
+        </div>
       </div>
     );
   }
