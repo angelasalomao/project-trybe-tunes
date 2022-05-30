@@ -49,7 +49,7 @@ class Profile extends React.Component {
         <h1>My profile</h1>
         <div className="profile-page">
           <div className="foto-container">
-            <CgProfile size={70}/>
+            <CgProfile size={100}/>
         </div>
         <p className="info-profile"><b>Name: </b>
           { name }
