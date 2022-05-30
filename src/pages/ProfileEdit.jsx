@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, Redirect } from 'react-router-dom';
-import Header from '../components/Header';
+import LinksFooter from '../components/LinksFooter';
+import logo from '../images/Group_11.png';
 import { getUser, updateUser } from '../services/userAPI';
 import Loading from './Loading';
+import './ProfileEdit.css';
 
 class ProfileEdit extends React.Component {
   constructor() {
@@ -81,12 +83,14 @@ class ProfileEdit extends React.Component {
       redirect,
     } = this.state;
     return (
-      <div data-testid="page-profile-edit">
-        <Header />
-        <h1>Editar perfil</h1>
-        <form>
+      <div data-testid="page-profile-edit" className="edit-profile-page">
+        <div className="div-logo">
+          <img src={ logo } alt="logo-trybe-tunes" className="logo-page-search" />
+        </div>
+        <h1>Edit profile</h1>
+        <form className="edit-container">
           <label htmlFor="edit-input-name">
-            Nome:
+            <b>Name:</b>
             <input
               type="text"
               id="edit-input-name"
@@ -94,10 +98,12 @@ class ProfileEdit extends React.Component {
               onChange={ this.handleChangeInfo }
               value={ name }
               name="name"
+              placeholder="name"
+              className="input-edit-profile"
             />
           </label>
           <label htmlFor="edit-input-email">
-            Email:
+            <b>Email:</b>
             <input
               type="email"
               id="edit-input-email"
@@ -105,10 +111,12 @@ class ProfileEdit extends React.Component {
               onChange={ this.handleChangeInfo }
               value={ email }
               name="email"
+              placeholder="email"
+              className="input-edit-profile"
             />
           </label>
-          <label htmlFor="edit-input-description">
-            Descrição:
+          <label htmlFor="edit-input-description" className="description-container">
+            <b>Description:</b>
             <textarea
               type="text"
               id="edit-input-description"
@@ -116,10 +124,12 @@ class ProfileEdit extends React.Component {
               onChange={ this.handleChangeInfo }
               value={ description }
               name="description"
+              placeholder="about me"
+              className="input-edit-description"
             />
           </label>
           <label htmlFor="edit-input-image">
-            Foto de perfil:
+            <b>Profile picture:</b>
             <input
               type="text"
               id="edit-input-image"
@@ -127,6 +137,8 @@ class ProfileEdit extends React.Component {
               onChange={ this.handleChangeInfo }
               value={ image }
               name="image"
+              placeholder="image url"
+              className="input-edit-profile"
             />
           </label>
           <Link to="/profile">
@@ -135,13 +147,17 @@ class ProfileEdit extends React.Component {
               data-testid="edit-button-save"
               disabled={ buttonDisabled }
               onClick={ this.clickSubmit }
+              className="btn-save"
             >
-              Salvar
+              Save
             </button>
           </Link>
         </form>
         { loading && <Loading /> }
         { redirect && <Redirect to="/profile" /> }
+        <div className="footer-links">
+        <LinksFooter />
+        </div>
       </div>
     );
   }
