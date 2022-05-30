@@ -66,9 +66,11 @@ class Profile extends React.Component {
           </button>
         </Link>
         { loading && <Loading /> }
+        <div className="footer-links">
         <LinksFooter />
         </div>
       </div>
+    </div>
     );
   }
 }
