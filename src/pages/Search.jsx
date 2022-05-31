@@ -7,6 +7,7 @@ import logo from '../images/Group_11.png';
 import './Search.css';
 import LinksFooter from '../components/LinksFooter';
 import searchIcon from '../images/Search-black.png';
+import { Button } from '../components/Button/Button';
 
 class Search extends React.Component {
   constructor() {
@@ -60,7 +61,7 @@ class Search extends React.Component {
           <img src={ logo } alt="logo-trybe-tunes" className="logo-page-search" />
         </div>
         <div className="search-bar-container">
-          <h1>Search</h1>
+          <h1 id="title">Search</h1>
           <div>
             <form onSubmit={ this.submitForm } className="form-search">
               <div className="label-input-search">
@@ -78,14 +79,13 @@ class Search extends React.Component {
                   className="search-input-image"
                 />
               </div>
-              <button
+              <Button
                 type="submit"
                 data-testid="search-artist-button"
                 disabled={ buttonDisabled }
-                className="btn-submit-search"
               >
                 Search
-              </button>
+              </Button>
             </form>
           </div>
         </div>

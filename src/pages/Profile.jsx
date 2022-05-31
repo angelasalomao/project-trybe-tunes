@@ -6,6 +6,7 @@ import logo from '../images/Group_11.png';
 import './Profile.css';
 import LinksFooter from '../components/LinksFooter';
 import {CgProfile} from 'react-icons/cg';
+import { Button } from '../components/Button/Button';
 
 class Profile extends React.Component {
   constructor() {
@@ -61,9 +62,9 @@ class Profile extends React.Component {
           { description }
           </p>
         <Link to="/profile/edit">
-          <button type="button" className="btn-edit-profile">
+          <Button type="button" dark className="btn-edit-profile">
           Edit profile
-          </button>
+          </Button>
         </Link>
         { loading && <Loading /> }
         <div className="footer-links">

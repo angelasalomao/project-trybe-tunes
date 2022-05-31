@@ -3,6 +3,7 @@ import Proptypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import './AlbumArtist.css';
 import LinksFooter from './LinksFooter';
+import { Button } from './Button/Button';
 
 class AlbumArtist extends React.Component {
   render() {
@@ -70,7 +71,7 @@ class AlbumArtist extends React.Component {
             to={ `/album/${collectionId}` }
             className="album-link"
           >
-            <button className="btn-link-album">Listen album</button>
+            <Button>Listen album</Button>
           </Link>
         </div>
         <LinksFooter />
